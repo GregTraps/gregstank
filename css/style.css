@@ -1,1 +1,157 @@
+* {
+    margin: 0;
+}
+/*header*/
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #4a1e62;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    min-width: 980px;
+}
+.con-header{
+    position: relative;
+    width: 980px;
+    min-width: 980px;
+    margin: 0 auto 5px auto;
+    height: 75px;
+    overflow: visible;
+}
+#logo {
+    height: 40px;
+    width: auto;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+}
 
+.nav {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.nav li {
+    display: inline;
+    float: right;
+    margin: 0 0 0 28px;
+}
+.nav a {
+    text-decoration: none;
+    font-family: 宋体;
+    font-size: 14px;
+    color: white;
+}
+#git {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+/*介绍栏和背景图*/
+.top {
+    width:100%;
+    min-width: 980px;
+    height: auto;
+    position: relative;
+    margin-top: 80px;
+    overflow: visible;
+}
+.top img {
+    width: 100%;
+    height: auto;
+    min-width: 980px;
+    position: relative;
+    display: block;
+}
+.con-top {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 980px;
+    min-width: 980px;
+    height: 100%;
+    margin: 0 -490px 0 0;
+}
+.con-top > div {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    background: -webkit-linear-gradient(top,rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.5) 25%,rgba(255,255,255,0) 100%);
+    background: -moz-linear-gradient(top,rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.5) 25%,rgba(255,255,255,0) 100%);
+    background: -o-linear-gradient(top,rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.5) 25%,rgba(255,255,255,0) 100%);
+    background-image: linear-gradient(top,rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.5) 25%,rgba(255,255,255,0) 100%);
+ }
+.con-top h1 {
+    font-size: 14px;
+    margin: 10px 10px 12px 10px;
+    float: right;
+    color: white;
+}
+.con-top p {
+    font-size: 12px;
+    margin: 0 10px 30px 10px;
+    line-height: 150%;
+    float: right;
+    color: white;
+}
+/*中间相册的部分*/
+.center {
+    width:100%;
+    min-width: 980px;
+    height: 500px;
+    position: relative;
+    overflow: visible;
+    background-color: lightgray;
+}
+.con-center {
+    width: 980px;
+    height: auto;
+    min-width: 980px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.pic-div {
+    width: 320px;
+    height: auto;
+    background-color: white;
+    padding-bottom: 500px;
+    margin: 0 10px -500px 0;
+    display: inline;
+    float: left;
+}
+.pic-div1 {
+    width: 320px;
+    height: auto;
+    background-color: white;
+    padding-bottom: 500px;
+    margin: 0 0 -500px 0;
+    display: inline;
+    float: right;
+}
+
+/*IFE2015-task0001-7是的要求中有“- 页面实际内容宽度为980px，
+头部背景、大图、底部背景均为100%宽，当浏览器宽度低于980px时，
+页面宽度不变，允许出现横向滚动条。右上角的Github图标在浏览器低于980px时消失。”
+以下是为窗口小于min-width能自适应做的探测器*/
+@media screen and (max-width: 980px) {
+    #git {
+        visibility: hidden;
+    }
+    .con-top {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 980px;
+        min-width: 980px;
+        height: 100%;
+        margin: 0;
+    }
+}
